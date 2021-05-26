@@ -21,7 +21,8 @@ The choosen validation set is written in `selected_data.csv`
 ### Usage
 
 - Run `train.py` file to train the CPC encoder and save weight.
-- Run `CpcAttack.py` to generate adv examples and evaluate them
+- Run `CpcAttack.py` to generate adv examples and evaluate them.
+  
   e.g. run the attack 14 iterations using momentum 1.1 on gpu3 and evaluate on model vgg19_bn
 ```
   python CpcAttack.py --model vgg19_bn --iters 14 --gpu 3 --momentum 1.1
