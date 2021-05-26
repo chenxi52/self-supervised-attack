@@ -113,7 +113,7 @@ if __name__ == '__main__':
     # One way to prepare 'data/selected_data.csv'
     # selected_data_csv = open('data/selected_data.csv', 'w')
     # data_writer = csv.writer(selected_data_csv)
-    dataset_dir = 'data/ILSVRC2012_img_val'
+    dataset_dir = 'datafile/ILSVRC2012_img_val'
     dataset = torchvision.datasets.ImageFolder(dataset_dir)
     label_ind = torch.randperm(500).numpy()
     selected_labels_ls = np.array(dataset.classes)[label_ind]

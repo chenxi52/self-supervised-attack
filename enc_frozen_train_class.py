@@ -160,7 +160,7 @@ def run_epochs(iter_num):
         transforms.CenterCrop(240),
         transforms.ToTensor(),
     ])
-    imageNet_dataset = our_dataset(data_dir='data/ILSVRC2012_img_val', data_csv='data/selected_data.csv', mode='train',
+    imageNet_dataset = our_dataset(data_dir='datafile/ILSVRC2012_img_val', data_csv='data/selected_data.csv', mode='train',
                                    img_num=img_num, transform=data_transform)
     train_dl = DataLoader(imageNet_dataset, batch_size=batch_size, shuffle=False, collate_fn=train_collate_fn)
     val_dl=DataLoader(imageNet_dataset,batch_size=batch_size,shuffle=True,collate_fn=val_collate_fn)

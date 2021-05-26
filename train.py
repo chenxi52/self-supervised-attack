@@ -41,8 +41,8 @@ if __name__=='__main__':
         transforms.ToTensor()])
     img_num=args.n_imgs//2
     batch_size=img_num*2
-    imageNet_dataset=our_dataset(data_dir='data/ILSVRC2012_img_val',data_csv='data/selected_data.csv',mode='train',
-                                 img_num=img_num,transform=transform)
+    imageNet_dataset=our_dataset(data_dir='datafile/ILSVRC2012_img_val', data_csv='data/selected_data.csv', mode='train',
+                                 img_num=img_num, transform=transform)
     loader = DataLoader(imageNet_dataset, batch_size=batch_size, shuffle=False)
 
     #scheduler = torch.optim.lr_scheduler.StepLR(opt, 20, gamma=0.1, last_epoch=-1)
