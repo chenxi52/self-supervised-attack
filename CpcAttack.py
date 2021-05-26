@@ -221,7 +221,7 @@ if __name__=='__main__':
     n_imgs = 20
     img_num = n_imgs // 4
     batch_size = n_imgs
-    ds = our_dataset(data_dir='datafile/ILSVRC2012_img_val', data_csv='data/selected_data.csv', mode='train',
+    ds = our_dataset(data_dir='data/ILSVRC2012_img_val', data_csv='data/selected_data.csv', mode='train',
                      img_num=img_num, transform=data_transform)
     da_ld = DataLoader(ds, batch_size=batch_size, shuffle=False)
 

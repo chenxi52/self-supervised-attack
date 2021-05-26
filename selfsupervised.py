@@ -397,7 +397,7 @@ def run_eppoch(iter_num):
 
     model = CPC().to(device)
     optimizer = optim.Adam(model.parameters(), lr = 2e-4, weight_decay=1e-5, eps=1e-8)
-    imageNet_dataset=our_dataset(data_dir='datafile/ILSVRC2012_img_val', data_csv='data/selected_data.csv', mode='train',
+    imageNet_dataset=our_dataset(data_dir='data/ILSVRC2012_img_val', data_csv='data/selected_data.csv', mode='train',
                                  img_num=img_num, transform=data_transform)
     loader = DataLoader(imageNet_dataset, batch_size=batch_size, shuffle=False,collate_fn=train_collate_fn)
     for i, list in enumerate(loader):#list:tuple 2({img list:B},{label list:B})
